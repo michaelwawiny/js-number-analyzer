@@ -1,15 +1,23 @@
-# Number Analyzer
+# JavaScript Number Analyzer
 
-A JavaScript application that analyzes integers using Boolean helper functions.
+A beginner-friendly JavaScript project that analyzes numbers
+and compares two numbers using JavaScript functions.
 
 ## Features
 
-- Positive number detection.
-- Negative number detection.
-- Zero detection.
-- Even and odd detection.
-- Structured JavaScript object output.
-- Interactive browser interface.
+### Number Analyzer
+- Detect positive numbers.
+- Detect negative numbers.
+- Detect zero.
+- Identify even numbers.
+- Identify odd numbers.
+
+### Number Comparison
+- Compare two numbers.
+- Identify the greater number.
+- Detect equal numbers.
+- Calculate the absolute difference.
+- Support decimal numbers.
 
 ## Technologies
 
@@ -17,38 +25,27 @@ A JavaScript application that analyzes integers using Boolean helper functions.
 - CSS3
 - JavaScript
 
-## JavaScript Functions
+## Project Structure
 
-1. isPositive(number)
-2. isNegative(number)
-3. isZero(number)
-4. isEven(number)
-5. describeNumber(number)
+js-number-analyzer/
+│
+├── index.html
+├── style.css
+├── script.js
+├── app.js
+├── comparison.js
+└── README.md
 
 ## How to Run
 
-Clone the repository and open index.html in your browser.
+1. Clone the repository.
+2. Open the project folder.
+3. Open index.html in your browser.
 
-To run the JavaScript tests:
-
-node script.js
-
-## Roadmap.sh Challenge
-
-[Insert the exact project URL here]
-
-## Author
+## Developer
 
 Michael Wawiny
 
-## Live Demo
-
-https://michaelwawiny.github.io/js-number-analyzer/
-
-## GitHub Repository
+## GitHub
 
 https://github.com/michaelwawiny/js-number-analyzer
-
-## Roadmap.sh Project
-
-[Insert the exact Roadmap.sh challenge URL]

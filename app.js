@@ -1,72 +1,50 @@
-// ========================================
-// DOM ELEMENTS
-// ========================================
-
 const numberInput = document.getElementById("numberInput");
 const analyzeBtn = document.getElementById("analyzeBtn");
-const errorMessage = document.getElementById("errorMessage");
 
+// RESULT ELEMENTS
 
-// ========================================
-// ANALYZE NUMBER
-// ========================================
+const positiveResult = document.getElementById("positiveResult");
+const negativeResult = document.getElementById("negativeResult");
+const zeroResult = document.getElementById("zeroResult");
+const evenResult = document.getElementById("evenResult");
+const oddResult = document.getElementById("oddResult");
 
-function analyzeNumber() {
-
-    const value = numberInput.value.trim();
-
-    // Validate input
-    if (value === "") {
-        errorMessage.textContent = "Please enter a number.";
-        return;
-    }
-
-    const number = Number(value);
-
-    if (!Number.isFinite(number) || !Number.isInteger(number)) {
-        errorMessage.textContent = "Please enter a valid integer.";
-        return;
-    }
-
-    errorMessage.textContent = "";
-
-    // Call the main function
-    const result = describeNumber(number);
-
-    // Display results
-    displayResult("positive", result.positive);
-    displayResult("negative", result.negative);
-    displayResult("zero", result.zero);
-    displayResult("even", result.even);
-    displayResult("odd", result.odd);
-}
-
-
-// ========================================
-// DISPLAY RESULTS
-// ========================================
-
-function displayResult(id, value) {
-
-    const element = document.getElementById(id);
-
-    element.textContent = value ? "TRUE" : "FALSE";
-
-    element.classList.toggle("true", value);
-
-}
-
-
-// ========================================
-// EVENT LISTENERS
-// ========================================
+// ANALYZE BUTTON
 
 analyzeBtn.addEventListener("click", analyzeNumber);
 
-numberInput.addEventListener("keydown", function(event) {
+// ENTER KEY SUPPORT
 
+numberInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         analyzeNumber();
     }
-
 });
+
+// ANALYZE FUNCTION
+
+function analyzeNumber() {
+
+    const input = numberInput.value;
+
+    if (input.trim() === "") {
+        alert("Please enter a number.");
+        return;
+    }
+
+    const number = Number(input);
+
+    if (!Number.isSafeInteger(number)) {
+        alert("Please enter a valid whole number.");
+        return;
+    }
+
+    const result = describeNumber(number);
+
+    positiveResult.textContent = result.positive ? "YES" : "NO";
+    negativeResult.textContent = result.negative ? "YES" : "NO";
+    zeroResult.textContent = result.zero ? "YES" : "NO";
+    evenResult.textContent = result.even ? "YES" : "NO";
+    oddResult.textContent = result.odd ? "YES" : "NO";
+
+}
