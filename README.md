@@ -40,3 +40,15 @@ node script.js
 ## Author
 
 Michael Wawiny
+
+## Live Demo
+
+https://michaelwawiny.github.io/js-number-analyzer/
+
+## GitHub Repository
+
+https://github.com/michaelwawiny/js-number-analyzer
+
+## Roadmap.sh Project
+
+[Insert the exact Roadmap.sh challenge URL]
