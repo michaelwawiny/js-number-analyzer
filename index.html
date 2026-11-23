@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">NUMBER<span>LAB.</span></div>
+        <p>JAVASCRIPT PROJECT 03</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <span class="tag">NUMBER INTELLIGENCE</span>
+
+            <h1>Understand<br>your <span>numbers.</span></h1>
+
+            <p>
+                Enter any integer and discover its mathematical
+                properties using JavaScript Boolean functions.
+            </p>
+        </section>
+
+
+        <section class="analyzer">
+
+            <label for="numberInput">ENTER A NUMBER</label>
+
+            <div class="input-group">
+
+                <input
+                    type="number"
+                    id="numberInput"
+                    placeholder="e.g. 25"
+                    step="1"
+                >
+
+                <button id="analyzeBtn">ANALYZE ↗</button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+
+            <div class="results" id="results">
+
+                <div class="result-header">
+                    <h2>Analysis Results</h2>
+                    <span>LIVE OUTPUT</span>
+                </div>
+
+                <div class="result-grid">
+
+                    <div class="result-card">
+                        <p>POSITIVE</p>
+                        <h3 id="positive">—</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <p>NEGATIVE</p>
+                        <h3 id="negative">—</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <p>ZERO</p>
+                        <h3 id="zero">—</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <p>EVEN</p>
+                        <h3 id="even">—</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <p>ODD</p>
+                        <h3 id="odd">—</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="explanation">
+
+            <h2>How it works</h2>
+
+            <div class="explanation-grid">
+
+                <article>
+                    <span>01</span>
+                    <h3>Boolean Logic</h3>
+                    <p>Every checker function returns either true or false.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Modulus Operator</h3>
+                    <p>The remainder operator determines whether a number is even.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>JavaScript Objects</h3>
+                    <p>All the results are combined into one structured object.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>NUMBERLAB. | BUILT WITH JAVASCRIPT</p>
+        <p>PROJECT 03 · 2026</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
